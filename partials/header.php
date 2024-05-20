@@ -58,11 +58,18 @@
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="nav-link" href="index.php">Home</a></li>
-          <li><a class="nav-link" href="menu.php">Menu</a></li>
-          <li><a class="nav-link" href="chefs.php">Chefs</a></li>
-          <li><a class="nav-link" href="gallery.php">Gallery</a></li>
-          <li><a class="nav-link" href="contact.php">Contact</a></li>
+          <?php
+          $pages = array('Home'=>'index.php', 
+          'Menu'=>'menu.php',
+          'Chefs'=>'chefs.php',
+          'Gallery'=>'gallery.php',
+          'Contact'=>'contact.php'
+          );
+          
+          foreach($pages as $page_name => $page_url){
+            echo('<li><a class="nav-link" href="'.$page_url.'">'.$page_name.'</a></li>');
+          }
+          ?>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -70,7 +77,6 @@
       <a href="#book-a-table" class="book-a-table-btn">Login</a>
 
     </div>
-  </header><!-- End Header -->
-  <!-- ======= Hero Section ======= -->
+  </header><!-- End Header --> 
 
 
