@@ -1,5 +1,5 @@
 <?php
-  require('_inc/functions.php');
+  require('../_inc/functions.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -8,7 +8,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Delicious Bootstrap Template - Index</title>
+  <title><?php 'Moj web | '. (basename($_SERVER["SCRIPT_NAME"], '.php'));?></title>
   <meta content="" name="description">
   <meta content="" name="keywords">
   <?php
@@ -48,7 +48,7 @@
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
           <?php
-          $pages = array('Home'=>'index.php', 
+          $pages = array('Home'=>'home.php', 
           'Menu'=>'menu.php',
           'Chefs'=>'chefs.php',
           'Gallery'=>'gallery.php',

@@ -2,35 +2,34 @@
 
 function add_styles() {
     #Favicon
-    echo '<link href="assets/img/favicon.png" rel="icon">';
-    echo '<link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">';
+    echo '<link href="../assets/img/favicon.png" rel="icon">';
+    echo '<link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">';
 
     #Google Fonts
     echo '<link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,600,600i,700,700i|Satisfy|Comic+Neue:300,300i,400,400i,700,700i" rel="stylesheet">';
 
     #Vendor CSS files
-    echo '<link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">';
-    echo '<link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">';
-    echo '<link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">';
-    echo '<link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">';
-    echo '<link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">';
-    echo '<link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">';
+    echo '<link href="../assets/vendor/animate.css/animate.min.css" rel="stylesheet">';
+    echo '<link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">';
+    echo '<link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">';
+    echo '<link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">';
+    echo '<link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">';
+    echo '<link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">';
 
     #Main CSS file
-    echo '<link href="assets/css/style.css" rel="stylesheet">';
+    echo '<link href="../assets/css/style.css" rel="stylesheet">';
 }
 
 function add_scripts(){
     #Vendor JS Files
-    echo '<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>';
-    echo '<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>';
-    echo '<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>';
-    echo '<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>';
-    echo '<script src="assets/vendor/php-email-form/validate.js"></script>';
+    echo '<script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>';
+    echo '<script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>';
+    echo '<script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>';
+    echo '<script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>';
+    echo '<script src="../assets/vendor/php-email-form/validate.js"></script>';
 
     #Main JS file
-    echo '<script src="assets/js/main.js"></script>';
-    echo '<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>';
+    echo '<script src="../assets/js/main.js"></script>';
 }
 
 function generate_menu(array $pages) {
@@ -62,6 +61,11 @@ function generateCarousel($slides) {
         </div>
         <?php
     }
+}
+
+function redirect_homepage(){
+    header("Location: templates/home.php");
+    die("Nepodarilo sa nájsť Domovskú stránku");
 }
 
 ?>
