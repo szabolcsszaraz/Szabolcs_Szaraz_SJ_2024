@@ -67,5 +67,41 @@ function redirect_homepage(){
     header("Location: templates/home.php");
     die("Nepodarilo sa nájsť Domovskú stránku");
 }
+function generateGallery($galleryItems) {
+    foreach ($galleryItems as $item) {
+        ?>
+        <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+                <a href="<?php echo $item['href']; ?>" class="gallery-lightbox">
+                    <img src="<?php echo $item['src']; ?>" alt="" class="img-fluid">
+                </a>
+            </div>
+        </div>
+        <?php
+    }
+}
 
+function generateTestimonials($testimonials) {
+    foreach ($testimonials as $testimonial) {
+        ?>
+        <div class="swiper-slide">
+            <div class="testimonial-item">
+                <img src="<?php echo $testimonial['img']; ?>" class="testimonial-img" alt="">
+                <h3><?php echo $testimonial['name']; ?></h3>
+                <h4><?php echo $testimonial['position']; ?></h4>
+                <div class="stars">
+                    <?php for ($i = 0; $i < 5; $i++) { ?>
+                        <i class="bi bi-star-fill"></i>
+                    <?php } ?>
+                </div>
+                <p>
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                    <?php echo $testimonial['quote']; ?>
+                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+            </div>
+        </div>
+        <?php
+    }
+}
 ?>

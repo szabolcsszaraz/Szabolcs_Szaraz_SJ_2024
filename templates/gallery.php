@@ -15,69 +15,21 @@
 
         <div class="row g-0">
 
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="../assets/img/gallery/gallery-1.jpg" class="gallery-lightbox">
-                <img src="../assets/img/gallery/gallery-1.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
+        <?php
+          $galleryItems = [
+              ['href' => '../assets/img/gallery/gallery-1.jpg', 'src' => '../assets/img/gallery/gallery-1.jpg'],
+              ['href' => '../assets/img/gallery/gallery-2.jpg', 'src' => '../assets/img/gallery/gallery-2.jpg'],
+              ['href' => '../assets/img/gallery/gallery-3.jpg', 'src' => '../assets/img/gallery/gallery-3.jpg'],
+              ['href' => '../assets/img/gallery/gallery-4.jpg', 'src' => '../assets/img/gallery/gallery-4.jpg'],
+              ['href' => '../assets/img/gallery/gallery-5.jpg', 'src' => '../assets/img/gallery/gallery-5.jpg'],
+              ['href' => '../assets/img/gallery/gallery-6.jpg', 'src' => '../assets/img/gallery/gallery-6.jpg'],
+              ['href' => '../assets/img/gallery/gallery-7.jpg', 'src' => '../assets/img/gallery/gallery-7.jpg'],
+              ['href' => '../assets/img/gallery/gallery-8.jpg', 'src' => '../assets/img/gallery/gallery-8.jpg'],
+          ];
 
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="../assets/img/gallery/gallery-2.jpg" class="gallery-lightbox">
-                <img src="../assets/img/gallery/gallery-2.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
+          generateGallery($galleryItems);
+        ?>
 
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="../assets/img/gallery/gallery-3.jpg" class="gallery-lightbox">
-                <img src="../assets/img/gallery/gallery-3.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="../assets/img/gallery/gallery-4.jpg" class="gallery-lightbox">
-                <img src="../assets/img/gallery/gallery-4.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="../assets/img/gallery/gallery-5.jpg" class="gallery-lightbox">
-                <img src="../assets/img/gallery/gallery-5.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="../assets/img/gallery/gallery-6.jpg" class="gallery-lightbox">
-                <img src="../assets/img/gallery/gallery-6.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="../assets/img/gallery/gallery-7.jpg" class="gallery-lightbox">
-                <img src="../assets/img/gallery/gallery-7.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="../assets/img/gallery/gallery-8.jpg" class="gallery-lightbox">
-                <img src="../assets/img/gallery/gallery-8.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
 
         </div>
 
