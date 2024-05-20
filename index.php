@@ -35,22 +35,11 @@
                   'description' => 'Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.',
               ],
           ];
+
+          generateCarousel($slides);
         ?>
 
-  <?php foreach ($slides as $index => $slide): ?>
-  <div class="carousel-item <?php if ($slide['active']) echo 'active'; ?>" style="background-image: url(<?php echo $slide['image']; ?>);">
-      <div class="carousel-container">
-          <div class="carousel-content">
-              <h2 class="animate__animated animate__fadeInDown"><?php echo $slide['title']; ?></h2>
-              <p class="animate__animated animate__fadeInUp"><?php echo $slide['description']; ?></p>
-              <div>
-                  <a href="menu.php" class="btn-menu animate__animated animate__fadeInUp scrollto">Our Menu</a>
-                  <a href="#book-a-table" class="btn-book animate__animated animate__fadeInUp scrollto">Book a Table</a>
-              </div>
-          </div>
-      </div>
-  </div>
-<?php endforeach; ?>
+
 
 
         </div>
