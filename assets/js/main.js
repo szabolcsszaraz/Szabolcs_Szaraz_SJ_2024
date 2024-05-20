@@ -1,11 +1,10 @@
 /**
 * Template Name: Delicious
+* Updated: Jan 29 2024 with Bootstrap v5.3.2
 * Template URL: https://bootstrapmade.com/delicious-free-restaurant-bootstrap-theme/
-* Updated: May 16 2024 with Bootstrap v5.3.3
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
-
 (function() {
   "use strict";
 
@@ -227,13 +226,6 @@
    */
   const galleryLightbox = GLightbox({
     selector: '.gallery-lightbox'
-  });
-
-  /**
-   * Initiate GLightbox 
-   */
-  GLightbox({
-    selector: '.glightbox'
   });
 
   /**
