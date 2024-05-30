@@ -1,9 +1,6 @@
 <?php
     include_once 'partials/header.php';
 ?>
-<br>
-<br>
-<br>
 <!-- ======= Menu Section ======= -->
 <section id="menu" class="menu">
       <div class="container">

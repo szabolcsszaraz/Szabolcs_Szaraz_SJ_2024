@@ -1,5 +1,7 @@
 <?php
 
+require_once('config.php');
+
 function add_styles() {
     #Favicon
     echo '<link href="../assets/img/favicon.png" rel="icon">';
@@ -26,7 +28,6 @@ function add_scripts(){
     echo '<script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>';
     echo '<script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>';
     echo '<script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>';
-    echo '<script src="../assets/vendor/php-email-form/validate.js"></script>';
 
     #Main JS file
     echo '<script src="../assets/js/main.js"></script>';
@@ -102,6 +103,20 @@ function generateTestimonials($testimonials) {
             </div>
         </div>
         <?php
+    }
+}
+
+function db_connection(){
+    try {
+        //$pdo = new PDO('mysql:host=localhost;dbname=vaša_databáza', 'vaše_používateľské_meno', 'vaše_heslo');
+        $connection = new PDO("mysql:host=" . DATABASE['HOST'] . ";dbname=" . DATABASE['DBNAME'] . ";charset=utf8", 
+                              DATABASE['USER_NAME'], 
+                              DATABASE['PASSWORD']);
+        $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
+        return $connection;
+    }catch(PDOException $e){
+        return 0;
+        die("Chyba pripojenia k databáze: " . $e->getMessage());
     }
 }
 ?>
