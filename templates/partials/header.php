@@ -55,7 +55,8 @@
           'Contact'=>'contact.php'
           );
           
-          echo(generate_menu($pages));
+          $menu_object  = new Menu($pages);
+          echo($menu_object->generate_menu());
           ?>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
