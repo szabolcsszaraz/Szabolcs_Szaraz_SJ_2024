@@ -16,18 +16,18 @@
         <div class="row g-0">
 
         <?php
-          $galleryItems = [
-              ['href' => '../assets/img/gallery/gallery-1.jpg', 'src' => '../assets/img/gallery/gallery-1.jpg'],
-              ['href' => '../assets/img/gallery/gallery-2.jpg', 'src' => '../assets/img/gallery/gallery-2.jpg'],
-              ['href' => '../assets/img/gallery/gallery-3.jpg', 'src' => '../assets/img/gallery/gallery-3.jpg'],
-              ['href' => '../assets/img/gallery/gallery-4.jpg', 'src' => '../assets/img/gallery/gallery-4.jpg'],
-              ['href' => '../assets/img/gallery/gallery-5.jpg', 'src' => '../assets/img/gallery/gallery-5.jpg'],
-              ['href' => '../assets/img/gallery/gallery-6.jpg', 'src' => '../assets/img/gallery/gallery-6.jpg'],
-              ['href' => '../assets/img/gallery/gallery-7.jpg', 'src' => '../assets/img/gallery/gallery-7.jpg'],
-              ['href' => '../assets/img/gallery/gallery-8.jpg', 'src' => '../assets/img/gallery/gallery-8.jpg'],
+        $galleryItems = [
+          ['href' => '../assets/img/gallery/gallery-1.jpg', 'src' => '../assets/img/gallery/gallery-1.jpg'],
+          ['href' => '../assets/img/gallery/gallery-2.jpg', 'src' => '../assets/img/gallery/gallery-2.jpg'],
+          ['href' => '../assets/img/gallery/gallery-3.jpg', 'src' => '../assets/img/gallery/gallery-3.jpg'],
+          ['href' => '../assets/img/gallery/gallery-4.jpg', 'src' => '../assets/img/gallery/gallery-4.jpg'],
+          ['href' => '../assets/img/gallery/gallery-5.jpg', 'src' => '../assets/img/gallery/gallery-5.jpg'],
+          ['href' => '../assets/img/gallery/gallery-6.jpg', 'src' => '../assets/img/gallery/gallery-6.jpg'],
+          ['href' => '../assets/img/gallery/gallery-7.jpg', 'src' => '../assets/img/gallery/gallery-7.jpg'],
+          ['href' => '../assets/img/gallery/gallery-8.jpg', 'src' => '../assets/img/gallery/gallery-8.jpg'],
           ];
-
-          generateGallery($galleryItems);
+          $page = new Page();
+          $page->generateGallery($galleryItems);
         ?>
 
 

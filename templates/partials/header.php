@@ -1,5 +1,5 @@
 <?php
-  require('../_inc/functions.php');
+  require('../_inc/config.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,7 +12,10 @@
   <meta content="" name="description">
   <meta content="" name="keywords">
   <?php
-  add_styles();
+  $page_name = basename($_SERVER["SCRIPT_NAME"], '.php');
+  $page_object = new Page();
+  $page_object->set_page_name($page_name);
+  echo($page_object->add_styles());
   ?>
 
   <!-- =======================================================
@@ -52,8 +55,13 @@
           'Menu'=>'menu.php',
           'Chefs'=>'chefs.php',
           'Gallery'=>'gallery.php',
-          'Contact'=>'contact.php'
+          'Contact'=>'contact.php',
+          'Login'=>'login.php'
           );
+
+          if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true){
+            $pages['Logout'] = 'logout.php';
+          }
           
           $menu_object  = new Menu($pages);
           echo($menu_object->generate_menu());
@@ -61,8 +69,6 @@
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
-
-      <a href="#book-a-table" class="book-a-table-btn">Login</a>
 
     </div>
   </header><!-- End Header --> 

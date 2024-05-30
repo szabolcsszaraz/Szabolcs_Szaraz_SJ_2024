@@ -15,28 +15,28 @@
         The <php if ($slide['active']) echo 'active'; ?> part ensures that the active class is added to the first slide or any other slide marked as active in the array.
         The slide content is dynamically inserted into the HTML using PHP's echo.-->
         <?php
-          $slides = [
-              [
-                  'active' => true,
-                  'image' => '../assets/img/slide/slide-1.jpg',
-                  'title' => '<span>Delicious</span> Restaurant',
-                  'description' => 'Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.',
-              ],
-              [
-                  'active' => false,
-                  'image' => '../assets/img/slide/slide-2.jpg',
-                  'title' => 'Lorem Ipsum Dolor',
-                  'description' => 'Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.',
-              ],
-              [
-                  'active' => false,
-                  'image' => '../assets/img/slide/slide-3.jpg',
-                  'title' => 'Sequi ea ut et est quaerat',
-                  'description' => 'Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.',
-              ],
-          ];
-
-          generateCarousel($slides);
+        $slides = [
+          [
+              'active' => true,
+              'image' => '../assets/img/slide/slide-1.jpg',
+              'title' => '<span>Delicious</span> Restaurant',
+              'description' => 'Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.',
+          ],
+          [
+              'active' => false,
+              'image' => '../assets/img/slide/slide-2.jpg',
+              'title' => 'Lorem Ipsum Dolor',
+              'description' => 'Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.',
+          ],
+          [
+              'active' => false,
+              'image' => '../assets/img/slide/slide-3.jpg',
+              'title' => 'Sequi ea ut et est quaerat',
+              'description' => 'Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.',
+          ],
+      ];
+          $page = new Page();
+          $page->generateCarousel($slides);
         ?>
 
 

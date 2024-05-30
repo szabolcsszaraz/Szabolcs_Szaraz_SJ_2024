@@ -10,12 +10,16 @@
 
         function generate_menu(): string{
             $menu_items = ''; // Inicializácia premennej pre uloženie HTML kódu navigačného menu
-
             // Prechádza všetky položky v zadanom zozname stránok a URL adries
             foreach($this->pages as $page_name => $page_url){
+                if($page_name == 'Logout'){
+                    $menu_items .= '<li><a href="' . $page_url . '" class="book-a-table-btn">' . $page_name . '</a></li>';
+                }
+                else{
                 // Pre každú stránku pridá odkaz do navigačného menu
                 $menu_items .= '<li><a href="' . $page_url . '">' . $page_name . '</a></li>';
-            }
+                }    
+            }   
 
             // Vráti vygenerovaný HTML kód pre navigačné menu
             return $menu_items;

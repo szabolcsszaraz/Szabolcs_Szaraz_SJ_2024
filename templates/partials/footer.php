@@ -24,7 +24,10 @@
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
     <?php
-    add_scripts();
+    $page_name = basename($_SERVER["SCRIPT_NAME"], '.php');
+    $page_object = new Page();
+    $page_object->set_page_name($page_name);
+    echo($page_object->add_scripts());
     ?>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>

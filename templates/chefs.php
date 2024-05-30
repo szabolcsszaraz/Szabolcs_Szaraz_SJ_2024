@@ -107,7 +107,9 @@
                     'quote' => 'Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.',
                 ],
             ];
-              generateTestimonials($testimonials);
+              
+            $page = new Page();
+            $page->generateTestimonials($testimonials);
             ?>
           </div>
           <div class="swiper-pagination"></div>
