@@ -1,6 +1,8 @@
 <?php
     include_once('partials/header.php');
-
+    echo '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">';
+    echo '<br>';
+    echo '<br>';
     $contact_object = new Contact();
 
     if(isset($_POST['edit_contact'])) {
@@ -35,7 +37,7 @@
 <main>
     <section class="container">
         <div class="row">
-            <div class="col-100 text-center">
+            <div>
                 <form action="" method="POST">
                     <label for="name">Meno:</label>
                     <br>

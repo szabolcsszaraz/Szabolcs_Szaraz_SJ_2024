@@ -11,9 +11,11 @@
     echo '<table class="admin-table">';
     echo '<tr><th>Name</th>
               <th>Email</th>
+              <th>Subject</th>
               <th>Message</th>
               <th>Acceptance</th>
               <th>Delete</th>
+              <th>Edit</th>
           </tr>';
     foreach($contacts as $c){
         echo '<tr>';

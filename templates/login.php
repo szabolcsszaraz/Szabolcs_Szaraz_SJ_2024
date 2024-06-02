@@ -1,6 +1,6 @@
 <?php
 include('partials/header.php');
-
+echo '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">';
 if(isset($_SESSION['logged_in'])&&$_SESSION['logged_in']==true){
     header('Location: admin.php');
 }
@@ -22,6 +22,7 @@ if(isset($_SESSION['logged_in'])&&$_SESSION['logged_in']==true){
                     <input type="text" name="password" placeholder="Vaše heslo">
                     <br>
                     <input type="submit" value="Odoslať" name="user_login">
+                    <a href="register.php">Register</a>
                 </form>
                 <?php
                     if(isset($_POST['user_login'])){
